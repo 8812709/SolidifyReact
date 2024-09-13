@@ -1,0 +1,10 @@
+.productbox{
+    text-align: center;
+    background-color: green;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: whitesmoke;
+    border: 1px;
+    border-radius: 30px;
+    padding: 10px;
+}

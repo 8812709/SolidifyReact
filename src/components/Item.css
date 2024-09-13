@@ -1,0 +1,15 @@
+.item-name{
+    text-align: center;
+    background-color:aqua ;
+    padding: 10px;
+    border-radius: 20px;
+}
+.item-date{
+    text-align: center;
+}
+.item-container{
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    
+}
