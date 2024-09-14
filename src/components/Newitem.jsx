@@ -1,28 +1,30 @@
 import { useState } from "react";
 
 export default function Newitem() {
-    function handlebuttonclick(event){
-        event.preventDefault();
-    }
-    const[title,Settitle]=useState('');
-    const[date,Setdate]=useState('');
+    const[newtitle,Settitle]=useState('');
+    const[newdate,Setdate]=useState('');
     function changedatehandler(event){
         Settitle(event.target.value);
-        console.log(title);
+        console.log(newtitle);
 
     }
     function changetexthandler(event){
         console.log(event.target.value);
         Setdate(event.target.value);
-        console.log(date);
+        console.log(newdate);
     }
-    function formhandler(event){
+    function formsubmithandler(event){
         event.preventDefault();
+        let productitems={
+            title:newtitle,
+            date:newdate
+        };
+        console.log(productitems);
 
     }
 
   return (
-    <form onSubmit={formhandler}>
+    <form onSubmit={formsubmithandler}>
       <label htmlFor="texty" >Enter the new-item name</label>
       <input type="text" id='texty' onChange={changetexthandler}/>
       <label htmlFor="dated">Enter the date</label>
